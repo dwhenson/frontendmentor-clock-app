@@ -1,0 +1,355 @@
+/* ==================================================
+	 Andy Bell Modern CSS Reset
+	 ================================================== */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+/* Adjust line heights */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  line-height: 1.2;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+img[width] {
+  width: auto;
+  /* Defer to max-width */
+}
+
+img[width][height] {
+  height: auto;
+  /* Preserve aspect ratio */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ==================================================
+	Global Styles
+	================================================== */
+/* 	Custom Properties
+   	================================================== */
+:root {
+  /* Colors */
+  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-neutral-300: hsla(0, 0%, 19%, 1);
+  --clr-neutral-400: hsla(0, 0%, 0%, 1);
+  /* Spacing */
+  --spacer: 1rem;
+  /* Font sizes */
+  --step--1: clamp(0.84rem, 0.78rem + 0.34vw, 1.08rem);
+  --step-0: clamp(1.13rem, 0.98rem + 0.71vw, 1.63rem);
+  --step-1: clamp(1.5rem, 1.23rem + 1.34vw, 2.44rem);
+  --step-2: clamp(2rem, 1.53rem + 2.37vw, 3.66rem);
+  --step-3: clamp(2.66rem, 1.86rem + 4.03vw, 5.48rem);
+  --step-4: clamp(3.55rem, 2.22rem + 6.68vw, 8.23rem);
+  --step-5: clamp(4.74rem, 2.56rem + 10.86vw, 12.34rem);
+  /* Font-families */
+  --ff-body: "inter", sans-serif;
+}
+
+/* Base Styles
+   ================================================== */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--step-0);
+}
+
+/* ==================================================
+	Utilities
+	================================================== */
+/* Center main content on page */
+.center-content {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1440px) minmax(0, 1fr);
+}
+.center-content > * {
+  grid-column: 2;
+}
+
+/* Add left and right padding to element */
+.container {
+  padding-right: clamp(1rem, 5%, 4rem);
+  padding-left: clamp(1rem, 5%, 4rem);
+}
+
+/* Add vertical rhythm between sections */
+.flow-section > * + * {
+  margin-top: 3rem;
+}
+@media (min-width: 50em) {
+  .flow-section > * + * {
+    margin-top: 2rem;
+  }
+}
+
+/* Add vertical rhythm inside elements */
+.flow-content > * + * {
+  margin-top: 1em;
+}
+
+/* Text accessible only for screen readers */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.visually-hidden:hover,
+.visually-hidden:active,
+.visually-hidden:focus {
+  display: block;
+  top: 5px;
+  left: 5px;
+  z-index: 100000;
+  /* Above WP toolbar */
+  width: auto;
+  height: auto;
+  padding: 15px 23px 14px;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  background-color: #f1f1f1;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  text-decoration: none;
+  color: currentColor;
+  clip: auto !important;
+}
+
+/* Add styled focus states on tab not hover */
+:focus-visible {
+  outline: 3px dotted currentColor;
+  outline-offset: 0.25rem;
+}
+
+:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+/* Align flex children at small and large viewports */
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
+}
+@media (min-width: 50em) {
+  .split {
+    flex-direction: row;
+  }
+}
+
+/* ==================================================
+   Blocks
+   ================================================== */
+/* 	Main and Sub-sections
+   	================================================== */
+/* Designed Section
+   ------------------- */
+.designed {
+  display: grid;
+  gap: 2rem;
+}
+.designed img {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 50em) {
+  .designed img {
+    max-width: 180%;
+  }
+}
+@media (min-width: 65em) {
+  .designed img {
+    max-width: 200%;
+    transform: translateX(5rem);
+  }
+}
+@media (min-width: 50em) {
+  .designed {
+    grid-template-rows: 6rem auto auto 6rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem 1rem;
+  }
+  .designed h2 {
+    grid-area: 1/1/2/-1;
+    margin-top: 2em;
+    text-align: center;
+  }
+  .designed .picture {
+    grid-area: 1/2/5/-1;
+  }
+  .designed .para-1 {
+    grid-area: 2/1/3/2;
+  }
+  .designed .para-2 {
+    grid-area: 3/1/4/2;
+  }
+}
+
+/* Infrastructure Section
+   ------------------- */
+.infrastructure {
+  color: var(--clr-neutral-100);
+}
+.infrastructure h2 {
+  color: var(--clr-neutral-100);
+}
+.infrastructure .grid {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+}
+.infrastructure .grid img {
+  grid-area: 1/1/3/-1;
+  margin-right: auto;
+  margin-left: auto;
+}
+.infrastructure .grid .para-1 {
+  grid-area: 3/1/-1/-1;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+.infrastructure .grid .background {
+  grid-area: 2/1/-1/2;
+  align-self: stretch;
+  width: 100vw;
+  border-radius: 0 5rem 0 5rem;
+  margin-left: calc(50% - 50vw);
+  background-color: var(--clr-primary-300);
+  background-image: url("../images/bg-pattern-circles.svg");
+  background-position: center -15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 50em) {
+  .infrastructure .grid {
+    grid-template-rows: 6rem auto 6rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 1rem;
+    background-size: 50%;
+  }
+  .infrastructure .grid img {
+    grid-area: 1/1/-1/2;
+    margin-top: 2rem;
+  }
+  .infrastructure .grid .para-1 {
+    grid-area: 2/2/3/-1;
+    padding-top: 4rem;
+  }
+  .infrastructure .grid .background {
+    grid-area: 2/1/3/-1;
+    background-position: -10rem -20rem;
+    background-size: 50%;
+  }
+}
+
+/* Free, open and simple
+   ------------------- */
+.free-open {
+  display: grid;
+  gap: 3rem;
+}
+.free-open img {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 50em) {
+  .free-open img {
+    max-width: 180%;
+    transform: translateX(-15rem);
+  }
+}
+@media (min-width: 65em) {
+  .free-open img {
+    max-width: 200%;
+    transform: translateX(-25rem);
+  }
+}
+@media (min-width: 50em) {
+  .free-open {
+    grid-template-rows: 6rem auto auto 6rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem 1rem;
+  }
+  .free-open .picture {
+    grid-area: 1/1/5/2;
+  }
+  .free-open .para-1 {
+    grid-area: 2/2/3/3;
+  }
+  .free-open .para-2 {
+    grid-area: 3/2/4/3;
+  }
+}
