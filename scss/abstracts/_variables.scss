@@ -1,0 +1,31 @@
+/* 	Custom Properties
+   	================================================== */
+
+:root {
+	/* Colors */
+	--clr-primary-100: hsla(356, 100%, 66%, 1);
+	--clr-primary-200: hsla(355, 100%, 74%, 1);
+	--clr-primary-300: hsla(208, 49%, 24%, 1);
+	--clr-neutral-100: hsla(0, 0%, 100%, 1);
+	--clr-neutral-200: hsla(240, 2%, 79%, 1);
+	--clr-neutral-300: hsla(207, 13%, 34%, 1);
+	--clr-neutral-400: hsla(240, 10%, 16%, 1);
+
+	// /* Gradients */
+	--clr-gradient-intro: linear-gradient(to right, hsla(13, 100%, 72%, 1), hsla(353, 100%, 62%, 1));
+	--clr-gradient-body: linear-gradient(to right, hsla(237, 23%, 32%, 1), hsla(237, 23%, 32% 1));
+
+	/* Spacing */
+	--spacer: 1rem;
+
+	/* Font sizes */
+	--step--1: clamp(0.75rem, 0.6rem + 0.73vw, 1.13rem);
+	--step-0: clamp(1rem, 0.8rem + 0.98vw, 1.25rem);
+	--step-1: clamp(1.33rem, 1.07rem + 1.3vw, 2rem);
+	--step-2: clamp(1.78rem, 1.43rem + 1.73vw, 2.67rem);
+	--step-3: clamp(2.37rem, 1.91rem + 2.31vw, 3.55rem);
+
+	/* Font-families */
+	--ff-body: "Overpass", sans-serif;
+	--ff-headings: "Ubuntu", sans-serif;
+}
