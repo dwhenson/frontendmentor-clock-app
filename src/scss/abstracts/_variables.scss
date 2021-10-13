@@ -1,5 +1,5 @@
-/* 	Custom Properties
-   	================================================== */
+/*  Custom Properties
+    ================================================== */
 
 :root {
   /* Colors */
@@ -11,8 +11,8 @@
   --spacer: 1rem;
 
   /* Font sizes */
-  --step--1: clamp(0.84rem, 0.78rem + 0.34vw, 1.08rem);
-  --step-0: clamp(1.13rem, 0.98rem + 0.71vw, 1.63rem);
+  --step--1: clamp(0.89rem, 0.87rem + 0.07vw, 0.94rem);
+  --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.13rem);
   --step-1: clamp(1.5rem, 1.23rem + 1.34vw, 2.44rem);
   --step-2: clamp(2rem, 1.53rem + 2.37vw, 3.66rem);
   --step-3: clamp(2.66rem, 1.86rem + 4.03vw, 5.48rem);

@@ -1,8 +1,8 @@
 @import "reset";
 
 /* ==================================================
-	Global Styles
-	================================================== */
+  Global Styles
+  ================================================== */
 
 @import "abstracts/variables";
 @import "abstracts/breakpoints";
@@ -11,15 +11,35 @@
    ================================================== */
 
 body {
-	font-family: var(--ff-body);
-	font-size: var(--step-0);
+  // background-image: url("../images/desktop/bg-image-daytime.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: var(--ff-body);
+  font-size: var(--step-0);
+  line-height: 1.7;
+}
+
+body > section {
+  block-size: 50vh;
+  padding-block-start: clamp(3rem, 15%, 6rem);
+  padding-block-end: clamp(3rem, 15%, 6rem);
+  /* transform: translateY(-100%);  */
+}
+
+figcaption {
+  font-weight: 700;
 }
 
 /* ==================================================
-	Utilities
-	================================================== */
+  Composition
+  ================================================== */
 
-@import "utilities/center-content";
+@import "composition/align-content";
+
+/* ==================================================
+  Utilities
+  ================================================== */
 @import "utilities/container";
 @import "utilities/flow-section";
 @import "utilities/flow-content";
@@ -31,4 +51,6 @@ body {
    Blocks
    ================================================== */
 
-@import "blocks/main";
+@import "blocks/quote";
+@import "blocks/time";
+@import "blocks/details";

@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
     <title>Frontend Mentor | Clock App</title>
   </head>
-  <body>
+  <body class="align-content">
     <section class="top">
-      <figure class="quote-wrapper">
-        <blockquote class="quote">
+      <figure class="quote-wrapper flow-content">
+        <blockquote class="quote ">
           <p>
             "The science of operations, as derived from mathematics more especially, is a
             science of itself, and has its own abstract truth and value"
@@ -30,11 +31,11 @@
       </figure>
     </section>
 
-    <section class="middle">
-      <div class="time-wrapper">
-        <p class="greeting-wrapper"><img src="" alt="" /><span class="greeting">Hello</span>it's currently</p>
-        <p><span class="time">11:37</span><span class="time-zone">BST</span></p>
-        <p class="location-wrapper"> in <span class="city">London</span><span class="country">UK</span></p>
+    <section class="middle split">
+      <div class="flow-content">
+        <p class="greeting-wrapper"><img src="" alt="" /><span class="greeting">Hello</span>, it's currently</p>
+        <p class="time-wrapper"><span class="time">11:37</span><span class="time-zone"> BST</span></p>
+        <p class="location-wrapper"> in <span class="city">London</span>, <span class="country"> UK</span></p>
       </div>
       <div class="toggle-wrapper">
         <input type="checkbox" name="toggle" id="toggle">
@@ -44,20 +45,20 @@
 
     <section class="bottom">
         <div class="detail">
-          <p class="title">Current Timezone</p>
-          <p class="region-city">Europe/London</p>
+          <p class="key">Timezone</p>
+          <p class="value">Europe/London</p>
         </div>
         <div class="detail">
-          <p class="title">Day of the year</p>
-          <p class="day-year">295</p>
+          <p class="key">Day of the year</p>
+          <p class="value">295</p>
         </div>
         <div class="detail">
-          <p class="title">Day of the week</p>
-          <p class="region-city">5</p>
+          <p class="key">Day of the week</p>
+          <p class="value">5</p>
         </div>
         <div class="detail">
-          <p class="title">Week number</p>
-          <p class="region-city">42</p>
+          <p class="key">Week number</p>
+          <p class="value">42</p>
         </div>
     </section>
   </body>

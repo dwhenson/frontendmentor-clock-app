@@ -1,0 +1,27 @@
+/*  Middle Time Section
+    ================================================== */
+
+.middle {
+  --bespoke-flow-spacer: calc(var(--spacer) * 1);
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  .time-wrapper {
+    min-inline-size: max-content;
+    line-height: 1;
+  }
+
+  .time {
+    font-size: var(--step-5);
+    font-weight: 700;
+  }
+
+  .time-zone {
+    font-size: var(--step-1);
+  }
+
+  .location-wrapper {
+    font-weight: 700;
+  }
+}

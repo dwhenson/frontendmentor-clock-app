@@ -1,6 +1,5 @@
 /* Add left and right padding to element */
 
 .container {
-	padding-right: clamp(1rem, 5%, 4rem);
-	padding-left: clamp(1rem, 5%, 4rem);
+  padding-inline: clamp(1rem, 5%, 2rem);
 }

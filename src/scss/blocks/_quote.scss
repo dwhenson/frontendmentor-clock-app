@@ -1,0 +1,23 @@
+/* 	Top Quote Section
+   	================================================== */
+
+.top {
+  max-inline-size: 100%;
+
+  @include respond-to("medium") {
+    max-inline-size: 50%;
+  }
+
+  figure {
+    position: relative;
+  }
+
+  button {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 100%;
+    border: 0;
+    margin-block-start: 0;
+    background-color: transparent;
+  }
+}
