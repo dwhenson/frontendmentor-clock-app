@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "rubik";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: local("rubik-Regular"), url("../fonts/inter-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "rubik";
+  font-weight: 700;
+  font-display: swap;
+  font-style: bold;
+  src: local("rubik-Bold"), url("../fonts/inter-700.ttf") format("truetype");
+}
