@@ -1,0 +1,58 @@
+.toggle {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 5rem auto;
+  align-items: center;
+  inline-size: min-content;
+  border: 1px solid var(--clr-neutral-200);
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.more,
+.less {
+  grid-area: 1 / 1 / -1 / 2;
+  padding: 0.5em 0.5em 0.5em 1.25em;
+}
+
+input,
+.svg-wrapper {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 0.5em 0.75em 0.5em 0.5em;
+}
+
+input {
+  opacity: 0;
+}
+
+.svg-wrapper {
+  transform: translateY(5%);
+}
+
+input {
+  ~ .less {
+    display: none;
+  }
+
+  ~ .more {
+    display: block;
+  }
+}
+
+input:checked {
+  ~ .less {
+    display: block;
+  }
+
+  ~ .more {
+    display: none;
+  }
+
+  ~ .svg-wrapper svg {
+    transform: rotate(180deg);
+  }
+}
+
+.less {
+  display: none;
+}
