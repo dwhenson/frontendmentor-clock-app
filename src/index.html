@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" media="print" href="" onload="this.media='all'" />
+    <script defer src="js/index.js"></script>
     <title>Frontend Mentor | Clock App</title>
   </head>
   <body class="align-content">
@@ -44,8 +45,8 @@
       <div class="toggle-wrapper">
         <label class="toggle" for="toggle">
           <input type="checkbox" name="toggle" id="toggle" />
-          <div class="more">More</div>
-          <div class="less">Less</div>
+          <div aria-live="polite" aria-label="Showing more details" class="more">More</div>
+          <div aria-live="polite" aria-label="Showing less details" class="less">Less</div>
           <div class="svg-wrapper">
             <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fill-rule="evenodd">
@@ -76,9 +77,5 @@
         <p class="value">42</p>
       </div>
     </section>
-    <script>
-      const toggle = document.querySelector(".toggle");
-      toggle.removeAttribute("hidden");
-    </script>
   </body>
 </html>

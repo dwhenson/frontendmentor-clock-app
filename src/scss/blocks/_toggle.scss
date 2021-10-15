@@ -27,6 +27,7 @@ input {
 
 .svg-wrapper {
   transform: translateY(5%);
+  transition: transform 250ms ease-in-out;
 }
 
 input {
@@ -51,8 +52,4 @@ input:checked {
   ~ .svg-wrapper svg {
     transform: rotate(180deg);
   }
-}
-
-.less {
-  display: none;
 }

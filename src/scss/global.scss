@@ -11,6 +11,7 @@
    ================================================== */
 
 body {
+  overflow: hidden;
   // background-image: url("../images/desktop/bg-image-daytime.jpg");
   background-position: center center;
   background-size: cover;
@@ -24,11 +25,15 @@ body > section {
   block-size: 50vh;
   padding-block-start: clamp(3rem, 15%, 6rem);
   padding-block-end: clamp(3rem, 15%, 6rem);
-  /* transform: translateY(-100%);  */
+  transition: transform 500ms ease-in-out;
 }
 
 figcaption {
   font-weight: 700;
+}
+
+.translate {
+  transform: translateY(-100%);
 }
 
 /* ==================================================
