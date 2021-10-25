@@ -1,11 +1,7 @@
-// // Form elements
-// export const form = document.querySelector("#form");
-// export const submitForm = document.querySelector("#submit");
-// export const emailInput = document.querySelector("#email");
-// export const errorField = document.querySelector("#error-message");
-// export const inputWrapper = document.querySelector(".input-wrapper");
-// // Tab elements
-// export const tabbed = document.querySelector(".tabbed");
-// export const tablist = tabbed.querySelector("ul");
-// export const tabs = tablist.querySelectorAll("a");
-// export const panels = tabbed.querySelectorAll('[id^="section"]');
+// Toggle elements
+export const toggle = document.querySelector(".toggle");
+export const sections = [...document.querySelectorAll("section")];
+// Quote elements
+export const fetchQuote = document.querySelector("[data-fetch='new-quote']");
+export const quote = document.querySelector(".quote");
+export const author = document.querySelector(".author");

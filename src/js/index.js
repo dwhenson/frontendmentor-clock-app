@@ -1,13 +1,11 @@
-// leave toggle hidden if no JS
-const toggle = document.querySelector(".toggle");
-toggle.removeAttribute("hidden");
+import { toggle, sections, fetchQuote } from "./utils/elements";
+import { fetchQuotes } from "./lib/fetch-quotes";
 
-// test if toggle is working
-const sections = [...document.querySelectorAll("section")];
-
+// Toggle overall page transition
 toggle.addEventListener("change", function () {
   for (const section of sections) {
-    console.log(section);
     section.classList.toggle("translate");
   }
 });
+
+fetchQuote.addEventListener("click", fetchQuotes);
