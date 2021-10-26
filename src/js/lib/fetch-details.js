@@ -16,7 +16,10 @@ export function fetchDetails() {
       dayOfWeek.textContent = data.day_of_week;
       week.textContent = data.week_number;
       // time.textContent = new Date(Date.parse(data.datetime));
-      time.textContent = data.datetime.slice(0, 4);
+      time.textContent = new Date().toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
       timezoneAbb.textContent = data.abbreviation;
     })
     .catch((error) => console.error(error));
