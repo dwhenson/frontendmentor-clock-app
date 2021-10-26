@@ -1,11 +1,5 @@
-import {
-  timezone,
-  dayOfYear,
-  dayOfWeek,
-  week,
-  time,
-  timezoneAbb,
-} from "../utils/elements";
+import { timezone, dayOfYear, dayOfWeek, week } from "../utils/elements";
+import { updateTime } from "./fetch-ip-time";
 
 export function fetchDetails() {
   fetch("http://worldtimeapi.org/api/ip")
@@ -15,12 +9,7 @@ export function fetchDetails() {
       dayOfYear.textContent = data.day_of_year;
       dayOfWeek.textContent = data.day_of_week;
       week.textContent = data.week_number;
-      // time.textContent = new Date(Date.parse(data.datetime));
-      time.textContent = new Date().toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-      timezoneAbb.textContent = data.abbreviation;
+      updateTime(data.abbreviation);
     })
     .catch((error) => console.error(error));
 }
