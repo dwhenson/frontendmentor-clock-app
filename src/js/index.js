@@ -1,9 +1,13 @@
 import { toggle, sections, fetchQuote } from "./utils/elements";
+import { fetchIp } from "./lib/fetch-ip-time";
+import { fetchDetails } from "./lib/fetch-details";
 import { fetchQuotes } from "./lib/fetch-quotes";
-import { renderDetails } from "./lib/render-details";
 
-// Render details
-renderDetails();
+// Fetch ip and location
+fetchIp();
+
+// Fetch and render details
+fetchDetails();
 
 // Toggle overall page transition
 toggle.addEventListener("change", function () {

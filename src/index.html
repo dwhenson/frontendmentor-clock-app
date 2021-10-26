@@ -33,18 +33,20 @@
     <section class="middle split">
       <div class="flow-content">
         <p class="greeting-wrapper">
+          <!-- TODO insert icon here-->
           <img src="" alt="" /><span class="greeting">Hello</span>, it's currently
         </p>
         <p class="time-wrapper">
-          <span class="time">11:37</span><span class="time-zone"> BST</span>
+          <span class="time" data-time>11:37</span><span data-timezone-abb> BST</span>
         </p>
         <p class="location-wrapper">
-          in <span class="city">London</span>, <span class="country"> UK</span>
+          in <span class="city" data-city>London</span>, <span class="country" data-country> UK</span>
         </p>
       </div>
       <div class="toggle-wrapper">
         <label class="toggle" for="toggle">
           <input type="checkbox" name="toggle" id="toggle" />
+          <!-- CHECK screen reader -->
           <div aria-live="polite" aria-label="Showing more details" class="more">More</div>
           <div aria-live="polite" aria-label="Showing less details" class="less">Less</div>
           <div class="svg-wrapper">
