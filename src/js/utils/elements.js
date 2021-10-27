@@ -21,3 +21,8 @@ export const sections = [...document.querySelectorAll("section")];
 export const fetchQuote = document.querySelector("[data-fetch='new-quote']");
 export const quote = document.querySelector(".quote");
 export const author = document.querySelector(".author");
+
+// Nighttime update elements
+export const body = document.querySelector("body");
+export const bottom = document.querySelector(".bottom");
+export const icon = document.querySelector(".icon");
