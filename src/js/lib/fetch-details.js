@@ -1,6 +1,9 @@
 import { timezone, dayOfYear, dayOfWeek, week } from "../utils/elements";
 import { updateTime } from "./fetch-ip-time";
 
+/**
+ * Fetches content required for details section
+ */
 export function fetchDetails() {
   fetch("http://worldtimeapi.org/api/ip")
     .then((response) => response.json())

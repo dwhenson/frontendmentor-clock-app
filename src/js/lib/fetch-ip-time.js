@@ -1,5 +1,9 @@
 import { city, country, time, timezoneAbb, greeting } from "../utils/elements";
 
+/**
+ * Updates the greeting based on the user time hour
+ * @param      {string}  timeString  The datatime string
+ */
 function updateGreeting(timeString) {
   const hour = Number.parseInt(timeString, 10);
   if (hour >= 5 && hour <= 11) {
@@ -13,6 +17,10 @@ function updateGreeting(timeString) {
   }
 }
 
+/**
+ * Updates the time and passes the hour to updateGreeting
+ * @param      {Date}  timezone  The timezone
+ */
 export function updateTime(timezone) {
   timezoneAbb.textContent = timezone;
   const timeString = new Date().toLocaleTimeString([], {
@@ -23,6 +31,10 @@ export function updateTime(timezone) {
   updateGreeting(timeString);
 }
 
+/**
+ * Fetches the user location data based on an IP address
+ * @param      {string}  ip      The user IP address
+ */
 function fetchLocation(ip) {
   fetch(`https://ipapi.co/${ip}/json/`)
     .then((response) => response.json())
@@ -33,6 +45,9 @@ function fetchLocation(ip) {
     .catch((error) => console.error(error));
 }
 
+/**
+ * Fetches the user IP address and passes to fetchLocation
+ */
 export function fetchIp() {
   fetch("https://api64.ipify.org?format=json")
     .then((response) => response.json())
