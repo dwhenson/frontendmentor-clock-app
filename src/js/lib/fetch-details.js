@@ -5,7 +5,7 @@ import { updateTime } from "./fetch-ip-time";
  * Fetches content required for details section
  */
 export function fetchDetails() {
-  fetch("http://worldtimeapi.org/api/ip")
+  fetch("https://worldtimeapi.org/api/ip")
     .then((response) => response.json())
     .then((data) => {
       timezone.textContent = data.timezone;
