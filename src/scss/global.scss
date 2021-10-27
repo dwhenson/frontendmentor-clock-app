@@ -12,13 +12,40 @@
 
 body {
   overflow: hidden;
-  // background-image: url("../images/desktop/bg-image-daytime.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/mobile/bg-image-daytime.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: var(--ff-body);
   font-size: var(--step-0);
   line-height: 1.7;
+  color: var(--clr-neutral-100);
+
+  @include respond-to("medium") {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/tablet/bg-image-daytime.jpg");
+  }
+
+  @include respond-to("large") {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/desktop/bg-image-daytime.jpg");
+  }
+}
+
+body.js-night {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/mobile/bg-image-nighttime.jpg");
+
+  @include respond-to("medium") {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/tablet/bg-image-nighttime.jpg");
+  }
+
+  @include respond-to("large") {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/desktop/bg-image-nighttime.jpg");
+  }
 }
 
 body > section {

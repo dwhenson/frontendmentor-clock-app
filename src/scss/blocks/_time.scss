@@ -17,11 +17,21 @@
     font-weight: 700;
   }
 
+  .greeting-wrapper {
+    display: inline-flex;
+
+    .icon {
+      margin-inline-end: 1rem;
+    }
+  }
+
   .timezone {
     font-size: var(--step-1);
   }
 
   .location-wrapper {
+    font-size: var(--step-1);
     font-weight: 700;
+    letter-spacing: 2px;
   }
 }
