@@ -19,10 +19,9 @@
 
   .greeting-wrapper {
     display: inline-flex;
+    justify-content: flex-start;
 
     .icon {
-      // Optical adjust for svg horizontal alignment
-      margin-block-start: 3px;
       margin-inline-end: 1rem;
     }
   }
