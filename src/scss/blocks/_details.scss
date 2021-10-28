@@ -12,9 +12,10 @@
   .wrapper {
     display: grid;
     grid-column: 2;
+    grid-auto-rows: 1fr;
 
     @include respond-to("medium") {
-      grid-template-rows: min-content min-content;
+      // grid-template-rows: min-content min-content;
       grid-template-columns: 1fr 1fr;
     }
   }
