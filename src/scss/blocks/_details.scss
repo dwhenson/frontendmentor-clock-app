@@ -2,6 +2,8 @@
     ================================================== */
 
 .bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(1rem, 1440px) minmax(0, 1fr);
   grid-column: 1 / -1;
   gap: var(--spacer);
   background-color: hsla(120, 0.91743%, 78.627%, 0.9);
@@ -9,6 +11,7 @@
 
   .wrapper {
     display: grid;
+    grid-column: 2;
 
     @include respond-to("medium") {
       grid-template-rows: min-content min-content;
