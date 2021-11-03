@@ -1,11 +1,11 @@
 /* Center main content on page */
-$min: 1rem;
+$min: 375px;
 $max: 1440px;
 
 .align-content {
   display: grid;
   grid-template-rows: repeat(3, 50vh);
-  grid-template-columns: minmax($min, 1fr) minmax($min, $max) minmax($min, 1fr);
+  grid-template-columns: 1fr minmax(375px, 1440px) 1fr;
   // align-content: space-between;
 
   > * {
