@@ -18,12 +18,12 @@
   }
 
   .greeting-wrapper {
-    display: flex;
-    justify-content: flex-start;
+    // display: flex;
+    // justify-content: flex-start;
 
-    span:not(.icon) {
-      inline-size: max-content;
-    }
+    // span:not(.icon) {
+    //   inline-size: max-content;
+    // }
 
     .icon {
       margin-block-start: 2px;
