@@ -21,6 +21,10 @@
     display: flex;
     justify-content: flex-start;
 
+    span:not(.icon) {
+      inline-size: max-content;
+    }
+
     .icon {
       margin-block-start: 2px;
       margin-inline-end: 0.5rem;
