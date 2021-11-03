@@ -55,15 +55,15 @@ function renderNighttime() {
 function updateGreeting(timeString) {
   const hour = Number.parseInt(timeString, 10);
   if (hour >= 5 && hour <= 11) {
-    greeting.textContent = "Good morning";
+    greeting.textContent = "Good morning,";
     renderDayTime();
   }
   if (hour >= 12 && hour <= 17) {
-    greeting.textContent = "Good afternoon";
+    greeting.textContent = "Good afternoon,";
     renderDayTime();
   }
   if (hour >= 18 || hour <= 4) {
-    greeting.textContent = "Good evening";
+    greeting.textContent = "Good evening,";
     renderNighttime();
   }
 }
