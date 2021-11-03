@@ -18,10 +18,11 @@
   }
 
   .greeting-wrapper {
-    display: inline-flex;
+    display: flex;
     justify-content: flex-start;
 
     .icon {
+      margin-block-start: 2px;
       margin-inline-end: 1rem;
     }
   }
